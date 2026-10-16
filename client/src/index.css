@@ -302,6 +302,42 @@ section{padding:clamp(4.5rem,9vw,8rem) clamp(1.25rem,4vw,2rem);}
 }
 .whatsapp-fab:hover{transform:scale(1.1);}
 
+/* Thank you */
+.thank-you{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem 1.25rem;
+  background:
+    radial-gradient(ellipse at top, rgba(201,162,75,.18), transparent 55%),
+    var(--teal-950);
+}
+.thank-you-card{
+  width:min(36rem,100%);
+  background:var(--sand);
+  color:var(--ink);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:clamp(2rem,5vw,3.25rem);
+  text-align:center;
+}
+.thank-you-card h1{
+  font-size:clamp(2.4rem,6vw,3.4rem);
+  color:var(--teal-950);
+  margin-bottom:1rem;
+}
+.thank-you-card p:not(.eyebrow){
+  color:var(--ink-soft);
+  font-size:1.05rem;
+  line-height:1.7;
+  margin-bottom:1.75rem;
+}
+.thank-you-card .btn:focus-visible{
+  outline:2px solid var(--teal-800);
+  outline-offset:3px;
+}
+
 /* Lightbox */
 .lightbox{
   position:fixed;inset:0;background:rgba(8,33,31,.94);z-index:2000;

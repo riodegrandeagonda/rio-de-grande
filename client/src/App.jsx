@@ -13,9 +13,16 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppFab from './components/WhatsAppFab';
 import Lightbox from './components/Lightbox';
+import ThankYou from './components/ThankYou';
+
+function isThankYouPath() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  return path === '/thank-you';
+}
 
 function App() {
   const [lightboxImage, setLightboxImage] = useState(null);
+  const thankYou = isThankYouPath();
 
   useEffect(() => {
     initAnalytics();
@@ -23,6 +30,10 @@ function App() {
 
   const openLightbox = (src, alt) => setLightboxImage({ src, alt });
   const closeLightbox = () => setLightboxImage(null);
+
+  if (thankYou) {
+    return <ThankYou />;
+  }
 
   return (
     <>
